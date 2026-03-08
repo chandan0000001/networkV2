@@ -1,0 +1,9 @@
+# Install OpenSSL dev libraries first
+sudo apt-get install libssl-dev  # Ubuntu/Debian
+sudo yum install openssl-devel    # CentOS/RHEL
+
+# Compile with optimizations
+g++ -o stresser_v2 assignment_v2.cpp -std=c++11 -lpthread -lssl -lcrypto -O3
+
+# Run with root
+sudo ./stresser_v2
